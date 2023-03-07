@@ -1,14 +1,14 @@
 kind: Service                             
 apiVersion: v1
 metadata:
-  name: tomcat-app
+  name: css-website
   labels:
-    app: tomcat-app
+    app: css-website
 spec:
   ports:
     - port: 8080                               
       targetPort: 80                    
       nodePort: 31200
   selector:
-    app: tomcat-app                   
+    app: css-website                  
   type: LoadBalancer            
