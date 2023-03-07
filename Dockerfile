@@ -1,6 +1,6 @@
 FROM  ubuntu:latest
 MAINTAINER mursalin031994@gmail.com
-RUN apt-get install -y httpd \
+RUN apt install apache2  \
  zip\
  unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page254/photogenic.zip /var/www/html/
