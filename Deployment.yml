@@ -1,0 +1,20 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+   name: css-website
+spec:
+   replicas: 2
+   selector:      # tells the controller which pods to watch/belong to
+    matchLabels:
+     app: css-website
+   template:
+      metadata:
+        labels:
+          app: css-website
+      spec:
+       containers:
+        - name: css-website
+          image: mursalindocker111/ansible-jenkins
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 80
