@@ -11,7 +11,7 @@ jobs:
 
       - run:
           name: send dockerfilr to ansible server
-          command: rsync -ravz --delete /home/circleci/project/* ubuntu@43.204.102.19:.      
+          command: rsync -ravz --delete /home/circleci/project/* ubuntu@172.31.13.103:.      
 
 
 
