@@ -14,7 +14,7 @@ spec:
       spec:
        containers:
         - name: css-website
-          image: mursalindocker111/ansible-jenkins
+          image: mursalindocker111/css-web-app:v1.27
           imagePullPolicy: Always
           ports:
           - containerPort: 80
