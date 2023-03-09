@@ -47,7 +47,7 @@ jobs:
       #                 ssh -o StrictHostKeyChecking=no ubuntu@15.207.89.114  sudo docker  push mursalindocker111/nginx:v1.${CIRCLE_BUILD_NUM};
       #                 ssh -o StrictHostKeyChecking=no ubuntu@15.207.89.114  sudo docker push mursalindocker111/nginx:latest;
 
- workflows:
+workflows:
       sample:
         jobs:
            - deploy
