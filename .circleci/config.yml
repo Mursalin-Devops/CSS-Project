@@ -17,6 +17,9 @@ jobs:
           name: "build Docker image"
           command: ssh -o StrictHostKeyChecking=no ubuntu@43.204.102.19 sudo docker build -t css-web-app:${CIRCLE_BUILD_NUM} .
              
+      - run:
+          name: "tag docker images"
+          command: ssh -o StrictHostKeyChecking=no ubuntu@43.204.102.19 cd /home/ubuntu/ sudo docker image css-web-app:${CIRCLE_BUILD_NUM}  mursalindocker111/css-web-app:${CIRCLE_BUILD_NUM};      
 
 
 
