@@ -15,7 +15,7 @@ jobs:
           command: rsync -ravz --delete /home/circleci/project/* ubuntu@43.204.102.19:.
           
       - run: 
-          name: "build Docker image"
+          name: "Build Docker image"
           command: ssh -o StrictHostKeyChecking=no ubuntu@43.204.102.19 sudo docker build -t css-web-app:${CIRCLE_BUILD_NUM} .
              
       - run:
