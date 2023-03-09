@@ -15,7 +15,7 @@ jobs:
           
       - run: 
           name: "build Docker image"
-          command: ssh -o StrictHostKeyChecking=no ubuntu@43.204.102.19 docker build -t css-app:${CIRCLE_BUILD_NUM} .
+          command: ssh -o StrictHostKeyChecking=no ubuntu@43.204.102.19 sudo docker build -t css-app:${CIRCLE_BUILD_NUM} .
              
 
 
