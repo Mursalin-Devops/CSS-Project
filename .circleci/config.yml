@@ -19,7 +19,8 @@ jobs:
              
       - run:
           name: "tag docker images"
-          command: ssh -o StrictHostKeyChecking=no ubuntu@43.204.102.19 cd /home/ubuntu/ sudo docker image css-web-app:${CIRCLE_BUILD_NUM}  mursalindocker111/css-web-app:${CIRCLE_BUILD_NUM};      
+          command: ssh -o StrictHostKeyChecking=no ubuntu@43.204.102.19 cd /home/ubuntu/ 
+                   ssh -o StrictHostKeyChecking=no sudo docker image tag css-web-app:${CIRCLE_BUILD_NUM}  mursalindocker111/css-web-app:${CIRCLE_BUILD_NUM};      
 
 
 
