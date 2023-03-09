@@ -25,7 +25,7 @@ jobs:
 
       - run:
           name: "push docker image to docker hub"
-          command: ssh -o StrictHostKeyChecking=no ubuntu@43.204.102.19 sudo docker login
+          command: ssh -o StrictHostKeyChecking=no ubuntu@43.204.102.19 sudo docker login -u mursalindocker111 -p ${dockerhub_passwd};
                    ssh -o StrictHostKeyChecking=no ubuntu@43.204.102.19 sudo docker push mursalindocker111/css-web-app:${CIRCLE_BUILD_NUM};       
                    ssh -o StrictHostKeyChecking=no ubuntu@43.204.102.19 sudo docker push mursalindocker111/css-web-app:V1.${CIRCLE_BUILD_NUM};              
       - run: 
